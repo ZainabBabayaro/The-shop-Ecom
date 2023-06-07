@@ -1,0 +1,8 @@
+{
+  "products": [
+    { "id": 1, "title": "YEEZY", "image": "../assets/sneaker-header.jpeg","price":"$200"},
+    { "id": 2, "title": "NIKE", "image": "../assets/nike.jpeg","price":"$250"},
+    { "id": 3, "title": "SKECHERS", "image": "../assets/skechers.jpeg","price":"$300"}
+  ]
+ 
+}
