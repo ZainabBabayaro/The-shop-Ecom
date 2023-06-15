@@ -6,14 +6,15 @@
             <a href=""><img alt="" :src="product.image" class="w-1/4 m-auto "></a>
             <p>{{product.title}}</p>
             <p>${{product.price}}</p>
-            <button class="bg-red-600 text-white py-3 px-5 rounded mb-3 " @click="checkout(product)">BUY NOW</button>
+            <button class="bg-orange-800  text-white py-3 px-5 rounded mb-3 " @click="checkout(product)">BUY NOW</button>
+            <button class="bg-orange-800  text-white py-3 px-5 rounded mb-3 ml-4" @click="addToCart(product)">ADD TO CART</button>
         </li>
         <CheckoutModal 
             v-if="openModal" 
             :title="title" 
             :price="price"
             :image="image"
-            :class="{'stopScroll' : openModal== true}"
+            :closedModal="closedModal"  
         />
        
     </ul>
@@ -23,7 +24,7 @@
 <script >
 // @ is an alias to /src
 
-import axios from 'axios'
+// import axios from 'axios'
 
 import CheckoutModal from '@/components/CheckoutModal.vue'
 export default{
@@ -36,7 +37,12 @@ export default{
             result:null,
             price:null,
             openModal: null,
+            closedModal:null,
+            cartItems: [],
         }
+    },
+    prop: {
+        cartItemCount: Number,
     },
   methods: {
     getProduct() {
@@ -70,23 +76,21 @@ export default{
         this.price = arg.price,
         this.image = arg.price,
         this.openModal = true
-        document.body.classList.add('stopScroll');
+        // this.openModal = this.closedModal   
+
+        // document.body.classList.add('stopScroll');
+    },
+    addToCart(product){
+
+        this.cartItems.push(product)
+        console.log(this.cartItems)
     },
     
-     
 
 },
     created() {
          this.getProduct()
-    }
-    
+    }   
 }
-
 </script>
 
-<style>
-    .stopScroll{
-        overflow: hidden;
-        
-    }
-</style>

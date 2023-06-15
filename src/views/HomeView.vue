@@ -1,11 +1,10 @@
 <template>
-  <div class="home" >
+  <div class="home">
     <!--                                   -->
-    <Hero class="w-1/2"/>
-    <div class="flex">
+    <Hero class=""/>
+    <div class="">
      <Product/>
      <!-- <CheckoutModal/>  -->
-
     </div>
   </div>
 </template>
