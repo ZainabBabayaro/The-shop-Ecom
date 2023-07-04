@@ -3,13 +3,33 @@
     <router-link to="/" >Home |</router-link>   
 
     <router-link to="/cart"> <div class="relative h-10">
-      <p class="text-xs absolute left-2.5 -top-1">23</p>
-       <img alt="" src="../src/assets/icons8-cart-30.png" class="w-8 m-0 p-0  "></div> 
+      <p class="text-xs absolute left-2.5 -top-1" ref="cartItems">{{productStore.name}}</p>
+      <img alt="" src="../src/assets/icons8-cart-30.png" class="w-8 m-0 p-0  "></div> 
     </router-link>
 
   </nav>
   <router-view/>
+
 </template>
+
+
+<script>
+  // import { useCartStore} from './stores/CartStores.js';
+  import { useProductStore} from './stores/ProductStores.js';
+ 
+    export default {
+      setup(){
+        const productStore = useProductStore()
+        
+
+
+        return{productStore}
+      
+      },
+  
+}
+</script>
+
 
 
 <style>

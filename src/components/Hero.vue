@@ -1,6 +1,6 @@
 <template>
-  <div class=" pt-18">
-    <div class=" image bg-cover bg-center h-screen flex items-center justify-start pl-16 h-92 ">
+  <div class="">
+    <div class=" image  bg-center  flex items-center  h-96  pl-16 ">
       <div class="max-w-2xl text-center text-black p-8">
         <h1 class="text-4xl font-bold mb-4">Welcome to Our Clothing Store</h1>
         <p class="text-lg">  Unleash Your Style. <br/> Discover the Essence of Fashion.</p>

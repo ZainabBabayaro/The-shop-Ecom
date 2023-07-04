@@ -1,3 +1,4 @@
+
 <template>
 <div>
   
@@ -16,16 +17,29 @@
 </div>
 </template>
 
+<script >
+// @ is an alias to /src
 
-<script>
-  import { useCartStore} from '../stores/CartStores.js';
- 
-export default {
-  setup(){
-    const cartStore = useCartStore()
-    return{cartStore}
-   
-  },
-  
+
+export default{
+  name: 'Cart',
+    components:{
+     
+    },
+    props:{
+      title: String,
+      price: String,
+
+       
+    },
+    data() {
+        return { 
+            cartItems: [],
+        }
+    },
+  methods: {
+
+  }
 }
 </script>
+

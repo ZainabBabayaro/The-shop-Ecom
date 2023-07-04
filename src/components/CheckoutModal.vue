@@ -1,3 +1,19 @@
+<script>
+// @ is an alias to /src
+export default {
+    
+  }
+</script>
+
+
+
+<style>
+  .modal-open {
+  overflow: hidden; 
+}
+</style>
+
+
 <template>
   <div class="text-black">
     <teleport to='body' v-if="isActive" >
@@ -57,47 +73,3 @@
     </teleport>
   </div>
 </template>
-
-<script>
-// @ is an alias to /src
-export default {
-    name: 'CheckoutModal',
-      props:{
-        title: String,
-        price: String,
-        image: String,
-        // closedModal: Boolean
-      },
-
-      data(){
-        return{
-          isActive : true,
-        }
-      },
-
-      methods:{
-        closeCheckout(){
-          this.isActive =! this.isActive 
-          document.body.classList.remove('modal-open'); 
-          // closedModal = this.isActive
-        },
-       
-        
-      },
-      mounted() {
-        if(this.isActive){
-             document.body.classList.add('modal-open');
-           
-           } 
-      },
-      
-  }
-</script>
-
-
-
-<style>
-  .modal-open {
-  overflow: hidden; 
-}
-</style>

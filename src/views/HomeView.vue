@@ -1,8 +1,7 @@
 <template>
   <div class="home">
-    <!--                                   -->
-    <Hero class=""/>
-    <div class="">
+    <Hero/>
+    <div>
      <Product/>
      <!-- <CheckoutModal/>  -->
     </div>
